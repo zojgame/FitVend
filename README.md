@@ -7,3 +7,5 @@ https://www.figma.com/design/PzDivm2hbuIWGaoq4wCVhu/Untitled?node-id=3-21&t=dEGo
 * Сделать адаптивную вёрстку.
 * Для отображения использовать массивы данных advantagesList и reviewsList.
 * Для проверки будем использовать pixel perfect
+
+По окончанию работы создать pull request и отправить https://t.me/RY6082
