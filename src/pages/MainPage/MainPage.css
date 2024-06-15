@@ -1,0 +1,152 @@
+.Main {
+  font-family: "Sofia Sans", sans-serif;
+  text-align: center;
+  background: #030826;
+  color: white;
+  min-height: 100vh;
+  padding-top: 111px;
+  padding-bottom: 74px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  place-items: center;
+}
+
+.advantages_container {
+  padding: 0 102px;
+}
+
+.reviews_container {
+  margin-top: 280px;
+  padding: 0 126px;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.advantages_title {
+  width: 712px;
+  text-align: left;
+}
+
+.reviews_title {
+  width: 728px;
+  text-align: center;
+}
+
+.title h1 {
+  letter-spacing: 0.02em;
+  font-weight: 700;
+  letter-spacing: 2%;
+  /* adaprive */
+  line-height: 67px;
+  font-size: 56px;
+}
+
+.advantages_title p {
+  text-align: center;
+}
+
+.reviews_title p {
+  text-align: justify;
+}
+
+.title p {
+  letter-spacing: 0.02em;
+  color: #ffffffe5;
+  /* adaprive */
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.reviews {
+  width: 100%;
+  padding-top: 80px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  grid-template-rows: masonry;
+}
+
+.review_card {
+  padding: 24px 30px;
+  display: flex;
+  flex-direction: column;
+  outline: 2px solid #3e85f680;
+  border-radius: 10px;
+}
+
+.review_card_desc {
+  color: #ffffff99;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  text-align: left;
+  padding-top: 16px;
+
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.review_column {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.review_username {
+  color: #ffffff99;
+  padding-top: 10px;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  text-align: left;
+
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.review_star_container {
+  display: flex;
+  gap: 4px;
+}
+
+.advantages {
+  width: 100%;
+  padding-top: 80px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.advantage_card {
+  grid-column: span 1 / span 1;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  outline: 2px solid #3e85f680;
+  border-radius: 16px;
+}
+
+.advantage_card_title {
+  display: flex;
+  place-items: center;
+  gap: 20px;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 34px;
+  text-align: left;
+}
+
+.advantage_card_desc {
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.02em;
+  text-align: left;
+  color: #ffffff99;
+}
