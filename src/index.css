@@ -1,5 +1,27 @@
 @import url("https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap");
 
+html {
+  /* Заголовок */
+  --text-size-xl: clamp(1.875rem, 1.41rem + 2.3234vw, 3.5rem);
+
+  /* Описание заголовка */
+  --text-size-sm: clamp(1rem, 0.9296rem + 0.3571vw, 1.25rem);
+
+  /* Заголовок карточки */
+  --text-size-lg: clamp(1.5rem, 1.4296rem + 0.3571vw, 1.75rem);
+
+  /* Описание карточки */
+  --text-size-xs: clamp(1rem, 0.9643rem + 0.1786vw, 1.125rem);
+
+  --line-height-xl: clamp(2.25rem, 1.6964rem + 2.7679vw, 4.1875rem);
+
+  --line-height-sm: clamp(1.1875rem, 1.0992rem + 0.4464vw, 1.5rem);
+
+  --line-height-lg: clamp(1.8125rem, 1.7332rem + 0.4464vw, 2.125rem);
+
+  --line-height-xs: clamp(1.125rem, 1.0556rem + 0.3571vw, 1.375rem);
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",

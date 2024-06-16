@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useLayoutEffect, useState } from "react";
 import { StarIcon } from "../../../icons";
 import { Review } from "../../../types";
 import { ReviewCard } from "./ReviewCard";
@@ -18,24 +18,35 @@ const calcColsReview = (colsCount: number, reviewsList: Review[]) => {
   return cols;
 };
 
+const getColsCount = (screenWidth: number) => {
+  if (screenWidth > 1024) {
+    return 3;
+  }
+  return 2;
+};
+
 const ReviewsContainer = ({ reviewsList }: ReviewsContainerProps) => {
   const [colsReview, setColsReview] = useState<Review[][]>([]);
 
   useEffect(() => {
-    const _colsReview = calcColsReview(3, reviewsList);
+    const screenWidth = window.innerWidth;
+    const colsCount = getColsCount(screenWidth);
+    const _colsReview = calcColsReview(colsCount, reviewsList);
 
     setColsReview(_colsReview);
-  }, []);
+  }, [reviewsList]);
 
   return (
     <section className="reviews_container container">
-      <div className="reviews_title title">
-        <h1>Loved by Our Users</h1>
-        <p>
-          Godman’s AI chatbot is built to grow and adapt as your business
-          evolves, constantly improving sales tactics, and enhancing customer
-          relationships!
-        </p>
+      <div className="reviews_title_container">
+        <div className="reviews_title title">
+          <h1>Loved by Our Users</h1>
+          <p>
+            Godman’s AI chatbot is built to grow and adapt as your business
+            evolves, constantly improving sales tactics, and enhancing customer
+            relationships!
+          </p>
+        </div>
       </div>
       <div className="reviews">
         {colsReview.map((col, index) => {

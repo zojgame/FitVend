@@ -6,6 +6,7 @@
   min-height: 100vh;
   padding-top: 111px;
   padding-bottom: 74px;
+  overflow: clip;
 }
 
 .container {
@@ -31,22 +32,28 @@
 }
 
 .advantages_title {
-  width: 712px;
   text-align: left;
 }
 
+/* padding: 0 356px; */
 .reviews_title {
-  width: 728px;
   text-align: center;
+}
+
+.reviews_title_container {
+  padding: 0 clamp(0rem, -4.1071rem + 20.5357vw, 14.375rem);
+}
+
+.advantages_title_container {
+  padding: 0 clamp(0rem, -4.6786rem + 23.3929vw, 16.375rem);
 }
 
 .title h1 {
   letter-spacing: 0.02em;
   font-weight: 700;
   letter-spacing: 2%;
-  /* adaprive */
-  line-height: 67px;
-  font-size: 56px;
+  line-height: var(--line-height-xl);
+  font-size: var(--text-size-xl);
 }
 
 .advantages_title p {
@@ -60,9 +67,8 @@
 .title p {
   letter-spacing: 0.02em;
   color: #ffffffe5;
-  /* adaprive */
-  font-size: 20px;
-  line-height: 24px;
+  font-size: var(--text-size-sm);
+  line-height: var(--line-height-sm);
 }
 
 .reviews {
@@ -80,6 +86,7 @@
   flex-direction: column;
   outline: 2px solid #3e85f680;
   border-radius: 10px;
+  flex: 1 1 0%;
 }
 
 .review_card_desc {
@@ -88,9 +95,8 @@
   letter-spacing: 0.02em;
   text-align: left;
   padding-top: 16px;
-
-  font-size: 20px;
-  line-height: 24px;
+  font-size: var(--text-size-sm);
+  line-height: var(--line-height-sm);
 }
 
 .review_column {
@@ -105,9 +111,8 @@
   font-weight: 400;
   letter-spacing: 0.02em;
   text-align: left;
-
-  font-size: 18px;
-  line-height: 22px;
+  font-size: var(--text-size-sm);
+  line-height: var(--line-height-sm);
 }
 
 .review_star_container {
@@ -137,16 +142,103 @@
   display: flex;
   place-items: center;
   gap: 20px;
-  font-size: 28px;
   font-weight: 700;
-  line-height: 34px;
+  font-size: var(--text-size-lg);
+  line-height: var(--line-height-lg);
+
   text-align: left;
 }
 
 .advantage_card_desc {
-  font-size: 18px;
-  line-height: 22px;
   letter-spacing: 0.02em;
   text-align: left;
   color: #ffffff99;
+  font-size: var(--text-size-xs);
+  line-height: var(--line-height-xs);
+}
+
+.ellipse_1 {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.ellipse_2 {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.ellipse_3,
+.ellipse_4,
+.ellipse_5 {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .title h1 {
+    text-align: center;
+  }
+
+  .reviews {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .advantages {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .advantages_container,
+  .reviews_container {
+    padding: 0 18px;
+  }
+}
+
+@media (max-width: 640px) {
+  .reviews {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+
+  .advantages {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+
+  .ellipse_1 {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  .ellipse_2 {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  .ellipse_3 {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 170px;
+  }
+
+  .ellipse_4 {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 875px;
+  }
+}
+
+@media (max-width: 320px) {
+  .ellipse_5 {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 807px;
+  }
 }
